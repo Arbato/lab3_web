@@ -181,9 +181,9 @@ public class DotsBean implements Serializable {
         Double y = dot.getY();
         Double r = dot.getR();
 
-        return (-r/2 <= x && x <= 0 && -r <= y && y <= 0) ||
-                (y >= (x/2) - (r/2) && x >= 0 && y <= 0) ||
-                ((x * x + y * y <= (r/2) * (r/2)) && x >= 0 && y >= 0);
+        return ((x * x + y * y <= r * r) && -r <= y && y <= 0 && x<=0) ||     // л н круг
+                (x >= -r && y <= r/2 && x <= 0 && y >= 0) ||     // Прямоугольник л в
+                (y <= - (2*x) + (r)  && x >= 0 && y >= 0); // треугл
 
     }
 }

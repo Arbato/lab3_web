@@ -76,31 +76,31 @@ class CanvasDrawer{
     //перерисовывает график - рисует область, оси и все точки
     drawArea(r){
         this.lastR = r;
-        alert(r);
+        //alert(r);
         sessionStorage.setItem("lastR", this.lastR);
         this.ctx.clearRect(0,0, 500, 500);
         r = this.rToCanvas(r);
+        // пругл
+                this.ctx.beginPath();
+                this.ctx.moveTo(250, 250);
+                this.ctx.lineTo(250 - r, 250);
+                this.ctx.lineTo(250 - r,  250 - (r/2) );
+                this.ctx.lineTo(250, 250 - (r/2));
+                this.ctx.lineTo(250, 250);
+                this.ctx.fill();
+        // треугл
 
         this.ctx.beginPath();
         this.ctx.moveTo(250, 250);
-        this.ctx.lineTo(250 - (r/2), 250);
-        this.ctx.lineTo(250 - (r/2),  250 + r);
-        this.ctx.lineTo(250, 250 + r);
-        this.ctx.lineTo(250, 250);
-        this.ctx.fill();
-
-        this.ctx.beginPath();
-        this.ctx.moveTo(250, 250);
-        this.ctx.lineTo(250, 250 + (r/2));
-        this.ctx.lineTo(250 + r, 250);
-        this.ctx.lineTo(250, 250);
-        this.ctx.fill();
-
-        this.ctx.beginPath();
-        this.ctx.arc(250, 250, r/2, 0, 3 * Math.PI/2, true);
-        this.ctx.moveTo(250, 250 - (r/2));
-        this.ctx.lineTo(250, 250);
+        this.ctx.lineTo(250, 250 - r);
         this.ctx.lineTo(250 + (r/2), 250);
+        this.ctx.lineTo(250, 250);
+        this.ctx.fill();
+        // круг
+        this.ctx.beginPath();
+        this.ctx.arc(250, 250, r, Math.PI/2, Math.PI);
+        this.ctx.lineTo(250, 250);
+        this.ctx.lineTo(250, 250+r);
         this.ctx.fill();
 
         this.drawAxes();
