@@ -10,6 +10,10 @@
         <properties>
             <property name="eclipselink.target-database" value="PostgreSQL"/>
             <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/kseniya"/>
+            <property name="javax.persistence.jdbc.user" value="kseniya"/>
+            <property name="javax.persistence.jdbc.password" value="cars0cars"/>
         </properties>
     </persistence-unit>
 </persistence>

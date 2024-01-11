@@ -27,24 +27,6 @@
             </div>
 
         <h:form >
-<!--            <div class="param" id="r_param">-->
-<!--                <p:outputLabel value="R:"/>-->
-<!--                <h:commandLink value="1" action="#{dotsBean.newDot.setR(1)}">-->
-<!--                    <f:ajax onevent="canvasDrawer.drawArea(1)"/>-->
-<!--                </h:commandLink>-->
-<!--                <h:commandLink value="1.5" action="#{dotsBean.newDot.setR(1.5)}">-->
-<!--                    <f:ajax onevent="canvasDrawer.drawArea(1.5)"/>-->
-<!--                </h:commandLink>-->
-<!--                <h:commandLink value="2" action="#{dotsBean.newDot.setR(2)}">-->
-<!--                    <f:ajax onevent="canvasDrawer.drawArea(2)"/>-->
-<!--                </h:commandLink>-->
-<!--                <h:commandLink value="2.5" action="#{dotsBean.newDot.setR(2.5)}">-->
-<!--                    <f:ajax onevent="canvasDrawer.drawArea(2.5)"/>-->
-<!--                </h:commandLink>-->
-<!--                <h:commandLink value="3" action="#{dotsBean.newDot.setR(3)}">-->
-<!--                    <f:ajax onevent="canvasDrawer.drawArea(3)"/>-->
-<!--                </h:commandLink>-->
-<!--            </div>-->
             <div class="param" id="r_param">
                 <p:outputLabel value="R:"/>
                 <p:selectOneMenu id="r_menu" value="#{dotsBean.newDot.r}" widgetVar="yearWV" onchange="canvasDrawer.drawArea(PF('yearWV').getSelectedValue())">
@@ -59,11 +41,7 @@
 
             </div>
             <div class="paramss">
-<!--            <div class="param" id="x_param">-->
-<!--                <p:outputLabel value="X:"/>-->
-<!--                <p:spinner styleClass="spinner" min="-5" max="5" stepFactor="0.1" rotate="true" value="#{dotsBean.newDot.x}" required="true" >-->
-<!--                </p:spinner>-->
-<!--            </div>-->
+
             <div class="param">
                 <p:outputLabel value="Выберите Y:"/>
                 <h:inputText id="y_param"
