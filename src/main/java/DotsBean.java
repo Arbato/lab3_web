@@ -11,8 +11,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @ManagedBean
-//@SessionScoped
-@ApplicationScoped
+@SessionScoped
+//@ApplicationScoped
 public class DotsBean implements Serializable {
     FacesContext context = FacesContext.getCurrentInstance();
     HttpSession session = (HttpSession) context.getExternalContext().getSession(false);

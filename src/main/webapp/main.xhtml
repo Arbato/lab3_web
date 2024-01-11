@@ -68,13 +68,18 @@
                 <p:outputLabel value="Выберите Y:"/>
                 <h:inputText id="y_param"
                              type="text"
+                             maxlength = "17"
                              value="#{dotsBean.newDot.y}"
+                             validator="#{mobile.validateModelNo}"
                              validatorMessage="Значение y не входит в [-5; 5]"
                              requiredMessage="Введите число"
                              converterMessage="Значение y должно быть числом"
                             required="true">
                 <f:validateDoubleRange minimum="-5" maximum="5"/>
+
                 </h:inputText>
+                <span class="error" aria-live="polite"></span>
+
                 <h:message for="y_param" styleClass="fail"/>
 
 
